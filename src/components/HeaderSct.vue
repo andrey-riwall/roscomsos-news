@@ -21,6 +21,10 @@
         </ul>
       </nav>
 
+      <!-- <form action="#" class="header__form">
+        <input type="text" class="header__search" placeholder="Поиск">  ДОЛБАЕБ ТУТ СДЕЛАЙ ЗАЕБАЛ
+      </form> -->
+
     </div>
   </header>
 </template>

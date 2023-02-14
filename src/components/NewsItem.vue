@@ -1,13 +1,13 @@
 <template>
   <li class="news__item">
-    <img :src=item.image_url alt="Изображение" class="news__img_item">
+    <img :src=item.picUrl alt="Изображение" class="news__img_item">
     <div class="news__text_item">
       <span class="news__date_item">
         {{ item.date }}
       </span>
       <h3 class="news__heading_item">
-        <a :href=item.heading_url class="news__link_item" target="_blank">
-          {{ item.heading }}
+        <a :href=item.newsUrl class="news__link_item" target="_blank">
+          {{ item.title }}
         </a>
       </h3>
       <p class="news__desc_item">

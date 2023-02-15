@@ -11,15 +11,20 @@
         </span>
       </a>
 
-      <!-- <nav class="header__nav">
+      <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a href="#footer" class="header__link">
-              в конец
-            </a>
+            <router-link :to="{ name: 'news' }" class="header__link">
+              главная
+            </router-link>
+          </li>
+          <li class="header__item">
+            <router-link :to="{ name: 'map' }" class="header__link">
+              карта
+            </router-link>
           </li>
         </ul>
-      </nav> -->
+      </nav>
 
       <form action="#" class="header__form" @submit.prevent="findText">
         <input ref="search" type="text" class="header__search" placeholder="Введите текст">
@@ -105,8 +110,13 @@
 
   @include m {
     .header {
-      height: vw(250);
+      height: vw(350);
+      padding: vw(50) 0;
       box-shadow: 0 0 vw(100) 0 rgba(#000000, .1);
+    }
+
+    .container {
+      flex-wrap: wrap;
     }
 
     .header__logo_big {
@@ -140,6 +150,17 @@
       padding: vw(10) vw(20);
       font-size: vw(32);
       cursor: pointer;
+    }
+
+    .header__list {
+      display: flex;
+      align-items: center;
+      gap: vw(40);
+    }
+
+    .header__item {
+      font-weight: 500;
+      font-size: vw(48);
     }
   }
 </style>

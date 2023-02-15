@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderSct/>
     <main>
-      <NewsSct/>
+      <router-view/>
     </main>
     <FooterSct name="footer"/>
   </div>
@@ -53,9 +53,10 @@
 import HeaderSct from '@/components/HeaderSct.vue';
 import FooterSct from '@/components/FooterSct.vue';
 import NewsSct from '@/components/NewsSct.vue';
+import MapPage from '@/components/MapPage.vue';
 
 export default {
-  components: { HeaderSct, FooterSct, NewsSct },
+  components: { HeaderSct, FooterSct, NewsSct, MapPage },
   data: function () {
     return {
 

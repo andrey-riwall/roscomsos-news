@@ -2,14 +2,14 @@
   <header id="header" class="header">
     <div class="container header__container">
 
-      <a href="#" class="header__logo">
+      <router-link :to="{ name: 'news' }" class="header__logo">
         <h1 class="header__logo_big">
           НОВОСТИ <span>РОСКОСМОСА</span>
         </h1>
         <span class="header__logo_small">
           и его предприятий
         </span>
-      </a>
+      </router-link>
 
       <nav class="header__nav">
         <ul class="header__list">

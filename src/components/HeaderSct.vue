@@ -11,7 +11,7 @@
         </span>
       </a>
 
-      <nav class="header__nav">
+      <!-- <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
             <a href="#footer" class="header__link">
@@ -19,11 +19,14 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
 
-      <!-- <form action="#" class="header__form">
-        <input type="text" class="header__search" placeholder="Поиск">  ДОЛБАЕБ ТУТ СДЕЛАЙ ЗАЕБАЛ
-      </form> -->
+      <form action="#" class="header__form" @submit.prevent="findText">
+        <input ref="search" type="text" class="header__search" placeholder="Введите текст">
+        <button class="header__btn">
+          Поиск
+        </button>
+      </form>
 
     </div>
   </header>
@@ -36,6 +39,26 @@
     height: vw(100);
     background: #fff;
     box-shadow: 0 0 vw(20) 0 rgba(#000000, .1);
+  }
+
+  .header__form {
+    display: flex;
+    align-items: center;
+    gap: vw(15);
+  }
+
+  .header__search {
+    width: vw(300);
+    padding: vw(15) vw(30);
+    border-radius: vw(10);
+    background: rgba(black, .07);
+    font-size: vw(16);
+  }
+
+  .header__btn {
+    padding: vw(10) vw(20);
+    font-size: vw(16);
+    cursor: pointer;
   }
 
   .container {
@@ -87,7 +110,7 @@
     }
 
     .header__logo_big {
-      font-size: vw(62);
+      font-size: vw(58);
       letter-spacing: vw(1);
     }
 
@@ -101,6 +124,23 @@
     .header__item {
       font-size: vw(56);
     }
+
+    .header__form {
+      gap: vw(30);
+    }
+
+    .header__search {
+      width: vw(600);
+      padding: vw(30) vw(60);
+      border-radius: vw(20);
+      font-size: vw(32);
+    }
+
+    .header__btn {
+      padding: vw(10) vw(20);
+      font-size: vw(32);
+      cursor: pointer;
+    }
   }
 </style>
 
@@ -113,7 +153,9 @@
       }
     },
     methods: {
-
+      findText: function() {
+        find(this.$refs.search.value);
+      }
     },
     computed: {
 

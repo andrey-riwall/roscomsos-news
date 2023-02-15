@@ -52,11 +52,9 @@
 <script>
 import HeaderSct from '@/components/HeaderSct.vue';
 import FooterSct from '@/components/FooterSct.vue';
-import NewsSct from '@/components/NewsSct.vue';
-import MapPage from '@/components/MapPage.vue';
 
 export default {
-  components: { HeaderSct, FooterSct, NewsSct, MapPage },
+  components: { HeaderSct, FooterSct },
   data: function () {
     return {
 

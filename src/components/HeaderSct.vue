@@ -20,7 +20,12 @@
           </li>
           <li class="header__item">
             <router-link :to="{ name: 'map' }" class="header__link">
-              карта
+              <span>
+                карта
+              </span>
+              <p>
+                космических мест Москвы
+              </p>
             </router-link>
           </li>
         </ul>
@@ -106,6 +111,24 @@
   .header__item {
     font-weight: 500;
     font-size: vw(24);
+
+    &:last-child {
+      padding: 0 vw(50);
+    }
+  }
+
+  .header__link {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: vw(175);
+      font-size: vw(14);
+      letter-spacing: vw(-1);
+    }
   }
 
   @include m {
@@ -160,7 +183,26 @@
 
     .header__item {
       font-weight: 500;
-      font-size: vw(48);
+      font-size: vw(60);
+
+      &:last-child {
+        padding: 0 vw(130);
+      }
+    }
+
+    .header__link {
+      position: relative;
+
+      p {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: vw(275);
+        font-size: vw(30);
+        letter-spacing: vw(-1);
+        text-align: center;
+      }
     }
   }
 </style>
